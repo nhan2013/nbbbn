@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>ditmemay</title>
+  <style>
+    body {
+      background-color: #ffe6f2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .box {
+      margin-top: 150px;
+      width: 150px;
+      height: 150px;
+      background-color: #ff66b2;
+      display: inline-block;
+      border-radius: 15px;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      transition: all 0.5s;
+    }
+    .box.open {
+      transform: scale(1.2);
+      background-color: #fff;
+    }
+    .message {
+      display: none;
+      font-size: 24px;
+      color: #ff3399;
+      margin-top: 40px;
+    }
+    .open + .message {
+      display: block;
+      animation: fadeIn 1s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <div class="box" onclick="openGift()"></div>
+  <div class="message">chuc hong phuong sinh nhat vv tuoi ms bell hon nha</div>
+
+  <script>
+    function openGift() {
+      document.querySelector('.box').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
